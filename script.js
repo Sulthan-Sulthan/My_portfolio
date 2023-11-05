@@ -48,13 +48,18 @@ const readMoreButton = document.querySelector('.read-more-button');
 const moreText = document.querySelector('.more-text');
 
 // Add an event listener to the "Read More" button.
-readMoreButton.addEventListener('click', () => {
+readMoreButton.addEventListener('click', (event) => {
   // Toggle the visibility of the additional text.
+  event.preventDefault();
   moreText.style.display = moreText.style.display === 'none' ? 'block' : 'none';
 
   // Change the text of the "Read More" button to reflect the new state.
   readMoreButton.textContent = moreText.style.display === 'none' ? 'Read More' : 'Read Less';
 });
+
+
+
+
 
 
 

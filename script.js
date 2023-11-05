@@ -39,3 +39,22 @@ let navLinks = document.querySelectorAll('header nav a')
      menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
  }
+
+
+ // Get the "Read More" button element.
+const readMoreButton = document.querySelector('.read-more-button');
+
+// Get the additional text element.
+const moreText = document.querySelector('.more-text');
+
+// Add an event listener to the "Read More" button.
+readMoreButton.addEventListener('click', () => {
+  // Toggle the visibility of the additional text.
+  moreText.style.display = moreText.style.display === 'none' ? 'block' : 'none';
+
+  // Change the text of the "Read More" button to reflect the new state.
+  readMoreButton.textContent = moreText.style.display === 'none' ? 'Read More' : 'Read Less';
+});
+
+
+
